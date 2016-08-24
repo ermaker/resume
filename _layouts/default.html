@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+<!--[if lt IE 9]>
+<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/semantic-ui/2.2.2/semantic.min.css" crossorigin="anonymous" />
+<style>
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+.ui.header,.ui.main.text.container {
+  font-family: 'Nanum Gothic',Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+}
+.ui.main.container {
+  margin-top: 3em;
+}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" crossorigin="anonymouns"></script>
+<script src="//cdn.jsdelivr.net/semantic-ui/2.2.2/semantic.min.js" crossorigin="anonymous"></script>
+<script>
+$(function() {
+  $('h1').addClass('ui header')
+  $('h2').addClass('ui header')
+  $('h3').addClass('ui header')
+})
+</script>
+</head>
+<body>
+<div class="ui fixed inverted menu">
+  <div class="ui container">
+    <a href="#" class="header item">
+      {{ site.title }}
+    </a>
+  </div>
+</div>
+<div class="ui main text container">
+  {{ content }}
+</div>
+</body>
+</html>
